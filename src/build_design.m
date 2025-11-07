@@ -12,7 +12,7 @@ function [A,b,meta] = build_design(y, s, N, K)
     y = y(:); T = numel(y);
     M = T - N;          % Number of time periods in response vector
     p = 1 + N + 2*K;    % Number of terms in time series linear equation 
-    if M <= p
+    if M < p
         error('Underdetermined: T-N (= %d) must exceed p (= %d).', M, p);
     end
     b = y(N+1:T);
