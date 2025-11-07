@@ -1,8 +1,8 @@
 function yhat = predict_in_sample(y, s, coef)
-% PREDICT_IN_SAMPLE     Given some data y, and a set of coefficients
-% describing a model of best fit, try to predict the response 
-% vector using a one-step-ahead prediction from the given 
-% data vector.
+% PREDICT_IN_SAMPLE     Given some data y, a seasonal period s, 
+% and a set of coefficients describing a model of best fit,
+% try to predict the response vector using a one-step-ahead
+% prediction method from the given data vector.
 %
 % Parameters:
 %   y = length T vector; scalar time series data 
