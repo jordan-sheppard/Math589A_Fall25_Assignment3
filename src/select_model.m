@@ -50,9 +50,15 @@ function best = select_model(y, s, Ngrid, Kgrid, criterion)
 %       .s = scalar; period of season in terms of number of timesteps
 %       .res = length M vector; residual/error of coefficients of
 %              best fit
+%       .all_scores = size(Ngrid,Kgrid) vector; the scores of each 
+%                     candidate model (not just the current best)
+%                     at each gridpoint N, K.
 %
 best = struct('score', Inf);
+all_scores = zeros([numel(Ngrid), numel(Kgrid)]);
+i = 1;
 for N = Ngrid(:).'
+  j = 1;
   for K = Kgrid(:).'
     try
       fit = fit_once(y, s, N, K);
@@ -60,9 +66,13 @@ for N = Ngrid(:).'
       continue
     end
     S = score_model(fit.RSS, fit.M, fit.p, criterion);
+    all_scores(i,j) = S;
     if S < best.score
         best = fit; best.score = S; best.criterion = criterion;
     end
+    j = j + 1;
   end
+  i = i + 1;
 end
+best.all_scores = all_scores;
 end
