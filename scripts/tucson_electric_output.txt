@@ -1,0 +1,38 @@
+>> run run_tucson.m
+================ BEST MODEL PARAMETERS ================
+N* = 0, K* = 4, Resulting BIC = -779.05845
+
+======= FITTED DIFFERENCE EQUATION COEFFICIENTS =======
+-- LINEAR COMPONENT COEFFICIENTS --
+c = 0.91733
+d = -0.00079
+
+-- LAG COMPONENT COEFFICIENTS --
+No a_k coefficients (N = 0)
+
+-- SEASONAL TRIGONOMETRIC COMPONENT COEFFICIENTS --
+alpha_1 = -0.24906
+alpha_2 = 0.06547
+alpha_3 = 0.01543
+alpha_4 = 0.03510
+beta_1 = -0.23165
+beta_2 = 0.18640
+beta_3 = 0.01992
+beta_4 = 0.01983
+
+============== Model Forecast Performance =============
+In-Sample (One-Step-Ahead Prediction) MSE = 0.0031661021
+
+12 Step Forecast:
+  yhat_{T + 1} = 0.68501
+  yhat_{T + 2} = 0.55541
+  yhat_{T + 3} = 0.51930
+  yhat_{T + 4} = 0.54527
+  yhat_{T + 5} = 0.75603
+  yhat_{T + 6} = 1.13307
+  yhat_{T + 7} = 1.30345
+  yhat_{T + 8} = 1.23183
+  yhat_{T + 9} = 1.01771
+  yhat_{T + 10} = 0.66183
+  yhat_{T + 11} = 0.51171
+  yhat_{T + 12} = 0.66108
