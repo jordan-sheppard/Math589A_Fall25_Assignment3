@@ -12,7 +12,7 @@ function print_coeffs(coefs)
 %                           seasonal harmonics
 %                   .beta: Length K vector; coefficients of sine
 %                          seasonal harmonics
-    fprintf('\n------ FITTED DIFFERENCE EQUTION COEFFICIENTS ------\n')
+    fprintf('\n======= FITTED DIFFERENCE EQUATION COEFFICIENTS =======\n')
     % Parse coefficients 
     c = coefs.c;
     d = coefs.d;
